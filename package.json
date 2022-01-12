@@ -1,0 +1,79 @@
+{
+  "name": "@wytxer/shepherd-vue",
+  "version": "1.0.0",
+  "description": "基于 shepherd.js 封装的 Vue.js 版本的新手引导组件。",
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "dev:lib": "vue-cli-service build --target lib --name ShepherdVue --filename shepherd-vue --dest lib src/components/index.js --watch",
+    "build:lib": "vue-cli-service build --target lib --name ShepherdVue --filename shepherd-vue --dest lib src/components/index.js",
+    "lint": "vue-cli-service lint"
+  },
+  "main": "lib/shepherd-vue.umd.min.js",
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-standard": "^5.1.2",
+    "@wytxer/style-utils": "^1.0.2",
+    "ant-design-vue": "^1.7.8",
+    "babel-eslint": "^10.1.0",
+    "core-js": "^3.20.2",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "less": "^3.13.1",
+    "less-loader": "^4.1.0",
+    "lint-staged": "^9.5.0",
+    "shepherd.js": "^8.3.1",
+    "vue": "^2.6.14",
+    "vue-router": "^3.5.3",
+    "vue-template-compiler": "^2.6.14",
+    "vuex": "^3.6.2"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/wytxer/shepherd-vue/#readme",
+  "keywords": [
+    "vue",
+    "shepherd",
+    "shepherd.js",
+    "driver",
+    "driver.js"
+  ],
+  "author": {
+    "name": "wytxer",
+    "url": "https://github.com/wytxer"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:wytxer/shepherd-vue.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wytxer/shepherd-vue/issues"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  },
+  "files": [
+    "lib"
+  ]
+}
